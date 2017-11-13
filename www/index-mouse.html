@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <script Language="Javascript">
+        var xmlhttp;
+        xmlhttp=new XMLHttpRequest();
+        
+        function forward()
+        {
+            xmlhttp.open("GET","cgi-bin/forward.cgi",true);
+            xmlhttp.send();
+        }
+        function left()
+        {
+            xmlhttp.open("GET","cgi-bin/left.cgi",true);
+            xmlhttp.send();
+        }
+        function right()
+        {
+            xmlhttp.open("GET","cgi-bin/right.cgi",true);
+            xmlhttp.send();
+        }
+        function reverse()
+        {
+            xmlhttp.open("GET","cgi-bin/reverse.cgi",true);
+            xmlhttp.send();
+        }
+        function stop(event)
+        {
+            xmlhttp.open("GET","cgi-bin/stop.cgi",true);
+            xmlhttp.send();
+        }
+        function lighton()
+        {
+            xmlhttp.open("GET","cgi-bin/lighton.cgi",true);
+            xmlhttp.send();
+        }
+        function lightoff()
+        {
+            xmlhttp.open("GET","cgi-bin/lightoff.cgi",true);
+            xmlhttp.send();
+        }
+        function a145()
+        {
+            xmlhttp.open("GET","cgi-bin/145.cgi",true);
+            xmlhttp.send();
+        }
+        function a115()
+        {
+            xmlhttp.open("GET","cgi-bin/115.cgi",true);
+            xmlhttp.send();
+        }
+        function a85()
+        {
+            xmlhttp.open("GET","cgi-bin/85.cgi",true);
+            xmlhttp.send();
+        }
+        function a60()
+        {
+            xmlhttp.open("GET","cgi-bin/60.cgi",true);
+            xmlhttp.send();
+        }
+        function a50()
+        {
+            xmlhttp.open("GET","cgi-bin/50.cgi",true);
+            xmlhttp.send();
+        }
+        function leftpan()
+        {
+            xmlhttp.open("GET","cgi-bin/leftpan.cgi",true);
+            xmlhttp.send();
+        }
+        function centerpan()
+        {
+            xmlhttp.open("GET","cgi-bin/centerpan.cgi",true);
+            xmlhttp.send();
+        }
+        function rightpan()
+        {
+            xmlhttp.open("GET","cgi-bin/rightpan.cgi",true);
+            xmlhttp.send();
+        }
+        
+        </script>
+    </head>
+    <style>
+        body {background-color: grey}
+        h1 {color:blue}
+        img {width:3%}
+        .border {
+            border-color:#ff0000;
+            overflow: hidden;
+            border-style: solid;
+        }
+    
+    button {
+        color: blue;
+        background:grey;
+        border: none;
+        font-size:100%;
+    }
+    div {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -moz-touch-callout: none;
+        touch-callout: none;
+    }
+    </style>
+    <body>
+        <div style="text-align:center">
+            <h1>Mouse Control</h1>
+            
+            <iframe src="http://172.22.24.108:8080/javascript_simple.html" frameborder="0" align="middle" width="640" height="480" align="middle" scrolling="no"></iframe>
+            <br>
+            <img src="/images/forward.png" id="t" onmousedown="forward()" onmouseup="stop(event)">
+            <br>
+            <img src="/images/left.png" id="l" onmousedown="left()" onmouseup="stop(event)">
+            <img vspace="10" hspace="20" src="/images/stop.png" id="s" onmousedown="stop(event)" onmouseup="stop(event)">
+            <img src="/images/right.png" id="r" onmousedown="right()" onmouseup="stop(event)">
+            <br>
+            <img src="/images/reverse.png" id="re" onmousedown="reverse()" onmouseup="stop()">
+            <br><br><br>
+            <img src="/images/lighton.png" id="lion" onclick="lighton()">
+            <img hspace="20" style="padding-left: 40px" src="/images/lightoff.png" id="lioff" onclick="lightoff()">
+        </div>
+        <br><br>
+        <div style="text-align: center";>
+            <span style="display:inline-block;padding:5px;border:5px solid #f00; font-size: 140%;font-weight: bold;">
+                <button >Camera Pan-Tilt: </button>
+                <br>
+                <button>Tilt Angle:</button>
+                <button onclick="a50()">50</button>
+                <button onclick="a60()">60</button>
+                <button onclick="a85()">85</button>
+                <button onclick="a115()">115</button>
+                <button onclick="a145()">145</button>
+                <br><br>
+                <button>Pan Position:</button>
+                <button onclick="leftpan()">Left</button>
+                <button onclick="centerpan()">Center</button>
+                <button onclick="rightpan()">Right</button>
+            </span>
+        </div>
+        <br>
+        <a href="index.html">Touch Control</a>
+    </body>
+</html>
+
+
+
+
+
+
+
+
